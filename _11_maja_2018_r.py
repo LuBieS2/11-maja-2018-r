@@ -1,7 +1,8 @@
 import enum
+from re import A
 
 
-file= open("przyklad.txt", "r")
+file= open("sygnaly.txt", "r")
 print(file)
 words=list(map(str.strip, file.readlines()))
 #print(words)
@@ -27,3 +28,17 @@ for word in words:
         ndw=word
     l=[]
 print(nd, ndw)
+from string import ascii_uppercase
+from math import fabs
+Alphabet=list(ascii_uppercase)
+ws1=[]
+for word in words:
+    c=0
+    for l1 in word:
+        for l2 in word:
+            if fabs(Alphabet.index(l1)-Alphabet.index(l2))>=10:
+                c+=1
+    if c==0:
+        ws1.append(word)
+for i in ws1:
+    print(i)
