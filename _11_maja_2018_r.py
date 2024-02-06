@@ -2,7 +2,7 @@ import enum
 from re import A
 
 
-file= open("sygnaly.txt", "r")
+file= open("przyklad.txt", "r")
 print(file)
 words=list(map(str.strip, file.readlines()))
 #print(words)
